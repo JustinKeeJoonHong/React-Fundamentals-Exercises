@@ -8,8 +8,8 @@ const MovieCard = ({ users, usersWhoLikedMovie, movieInfo }) => {
     : "None of the current users liked this movie";
 
   return (
-    <div>
-      <h2 key={movieInfo.id}>{movieInfo.name}</h2>
+    <div key={movieInfo.id}>
+      <h2>{movieInfo.name}</h2>
       <p>{likedByMessage}</p>
       <UserList users={users} usersWhoLikedMovie={usersWhoLikedMovie} />
     </div>
