@@ -1,14 +1,15 @@
 import MovieCard from "./MovieCard";
 
-const Dashboard = ({ usersByMovie, movies, users }) => {
-  const movieCards = Object.keys(movies).map((id) => {
+const Dashboard = ({ usersByMovie, users, movies }) => {
+  const movieCards = Object.keys(movies).map((id) => (
     <MovieCard
       key={id}
       users={users}
-      usersWhoLike={usersByMovie[id]}
+      usersWhoLikedMovie={usersByMovie[id]}
       movieInfo={movies[id]}
-    />;
-  });
+    />
+  ));
+
   return <ul>{movieCards}</ul>;
 };
 

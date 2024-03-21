@@ -1,14 +1,18 @@
-const MovieCard = ({ users, usersWhoLike, movieInfo }) => {
+const MovieCard = ({ users, usersWhoLikedMovie, movieInfo }) => {
+  console.log("this is userswhoLikedMovie");
+  console.log(usersWhoLikedMovie);
+  console.log(typeof usersWhoLikedMovie);
+  console.log("below is movieInfo");
+  console.log(movieInfo);
+  console.log(typeof movieInfo);
   return (
     <oi>
       {Object.keys(movieInfo).map((movieId) => {
-        console.log("------");
-        console.log(movieId);
         return (
           <li key={movieId.id}>
             <h2>{movieId.name}</h2>
             <p>
-              {usersWhoLike.length == 0
+              {usersWhoLikedMovie.length == 0
                 ? "Liked By:"
                 : "None of the current users liked this movie"}
             </p>
