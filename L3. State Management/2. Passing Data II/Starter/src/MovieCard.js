@@ -2,9 +2,11 @@ const MovieCard = ({ users, usersWhoLike, movieInfo }) => {
   return (
     <oi>
       {Object.keys(movieInfo).map((movieId) => {
+        console.log("------");
+        console.log(movieId);
         return (
-          <li key={movieInfo.id}>
-            <h2>{movie.name}</h2>
+          <li key={movieId.id}>
+            <h2>{movieId.name}</h2>
             <p>
               {usersWhoLike.length == 0
                 ? "Liked By:"
