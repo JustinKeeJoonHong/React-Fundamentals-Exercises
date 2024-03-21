@@ -1,3 +1,5 @@
+import UserList from "./UserList";
+
 const MovieCard = ({ users, usersWhoLikedMovie, movieInfo }) => {
   const likedByMessage = usersWhoLikedMovie
     ? usersWhoLikedMovie.length !== 0
@@ -9,6 +11,7 @@ const MovieCard = ({ users, usersWhoLikedMovie, movieInfo }) => {
     <div>
       <h2 key={movieInfo.id}>{movieInfo.name}</h2>
       <p>{likedByMessage}</p>
+      <UserList users={users} usersWhoLikedMovie={usersWhoLikedMovie} />
     </div>
   );
 };

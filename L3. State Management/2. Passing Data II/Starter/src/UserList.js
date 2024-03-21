@@ -1,5 +1,3 @@
-import MovieCard from "./MovieCard";
-
 const UserList = ({ users, usersWhoLikedMovie }) => {
   return (
     <ul>
