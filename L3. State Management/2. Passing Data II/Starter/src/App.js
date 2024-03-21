@@ -101,6 +101,7 @@ const App = () => {
 
   profiles.forEach((profile) => {
     const movieId = profile.favoriteMovieID;
+    console.log(typeof movieId);
 
     if (usersByMovie[movieId]) {
       usersByMovie[movieId].push(profile.userID);
@@ -108,6 +109,7 @@ const App = () => {
       usersByMovie[movieId] = [profile.userID];
     }
   });
+  console.log(usersByMovie);
   return (
     <div className="App">
       <header className="App-header">

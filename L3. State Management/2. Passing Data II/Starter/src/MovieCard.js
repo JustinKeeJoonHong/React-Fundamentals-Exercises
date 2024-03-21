@@ -1,15 +1,12 @@
-const MovieCard = (props) => {
-  console.log(props);
+const MovieCard = ({ users, usersWhoLike, movieInfo }) => {
   return (
     <oi>
-      {Object.keys(props.movies).map((movieId) => {
-        const movie = props.moives[movieId];
-        console.log(movieId);
+      {Object.keys(movieInfo).map((movieId) => {
         return (
-          <li key={movie.id}>
+          <li key={movieInfo.id}>
             <h2>{movie.name}</h2>
             <p>
-              {true
+              {usersWhoLike.length == 0
                 ? "Liked By:"
                 : "None of the current users liked this movie"}
             </p>
