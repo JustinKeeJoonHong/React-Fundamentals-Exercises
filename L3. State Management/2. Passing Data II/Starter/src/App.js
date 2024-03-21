@@ -96,15 +96,16 @@ const movies = {
 };
 
 const App = () => {
+  console.log("hi");
   let usersByMovie = {};
 
   profiles.forEach((profile) => {
     const movieId = profile.favoriteMovieID;
 
     if (usersByMovie[movieId]) {
-      usersByMovie[movieID].push(profile.userID);
+      usersByMovie[movieId].push(profile.userID);
     } else {
-      usersByMovie[movieID] = [profile.userID];
+      usersByMovie[movieId] = [profile.userID];
     }
   });
   return (
@@ -114,11 +115,6 @@ const App = () => {
         <h1 className="App-title">ReactND - Coding Practice</h1>
       </header>
       <h2>How Popular is Your Favorite Movie?</h2>
-      <Dashboard
-        usersByMovie={usersByMovie}
-        movies={movies}
-        users={users}
-      ></Dashboard>
     </div>
   );
 };
