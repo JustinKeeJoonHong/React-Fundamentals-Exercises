@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import ChatWindow from "./ChatWindow";
 import { useState } from "react";
 
 const users = [{ username: "Amy" }, { username: "John" }];
