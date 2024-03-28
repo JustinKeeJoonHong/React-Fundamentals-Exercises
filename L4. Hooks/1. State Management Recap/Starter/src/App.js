@@ -6,8 +6,8 @@ import { useState } from "react";
 const users = [{ username: "Amy" }, { username: "John" }];
 
 const App = () => {
-  // If the user did not type anything, he/she should not be allowed to submit.
-  const [message, setMessages] = useState([]);
+  // `messages` is an array of objects (e.g., { usermame: 'Amy', text: 'a' })
+  const [messages, setMessages] = useState([]);
 
   const onMessage = (username, message) => {
     const newMessage = {
@@ -15,7 +15,7 @@ const App = () => {
       text: message,
     };
 
-    setMessages(message.concat([newMessage]));
+    setMessages(messages.concat([newMessage]));
   };
 
   return (
