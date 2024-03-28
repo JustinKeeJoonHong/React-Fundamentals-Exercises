@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Score from "./Score";
 
 const value1 = Math.floor(Math.random() * 100);
 const value2 = Math.floor(Math.random() * 100);
@@ -22,9 +23,7 @@ const App = () => {
         </div>
         <button>True</button>
         <button>False</button>
-        <p className="text">
-          Your Score: {numCorrect}/{numQuestions}
-        </p>
+        <Score numQuestions={numQuestions} numCorrect={numCorrect} />
       </div>
     </div>
   );
