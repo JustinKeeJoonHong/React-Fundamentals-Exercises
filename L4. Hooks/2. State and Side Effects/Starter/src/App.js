@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Score from "./Score";
+import Game from "./Game";
 
 const value1 = Math.floor(Math.random() * 100);
 const value2 = Math.floor(Math.random() * 100);
@@ -16,15 +16,14 @@ const App = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className="App-title">ReactND - Coding Practice</h1>
       </header>
-      <div className="game">
-        <h2>Mental Math</h2>
-        <div className="equation">
-          <p className="text">{`${value1} + ${value2} + ${value3} = ${proposedAnswer}`}</p>
-        </div>
-        <button>True</button>
-        <button>False</button>
-        <Score numQuestions={numQuestions} numCorrect={numCorrect} />
-      </div>
+      <Game
+        value1={value1}
+        value2={value2}
+        value3={value3}
+        proposedAnswer={proposedAnswer}
+        numQuestions={numQuestions}
+        numCorrect={numCorrect}
+      />
     </div>
   );
 };
